@@ -6,10 +6,10 @@ const Appointment = require('../Models/Appointment'); // Import the Appointment 
 // Change the endpoint to /book
 router.post('/book', async (req, res) => {
   console.log("HI");
-    const { name, email, date, time, reason } = req.body;
+    const { name, email, date, time, reason,phone } = req.body;
     
     try {
-        const newAppointment = new Appointment({ name, email, date, time, reason });
+        const newAppointment = new Appointment({ name, email, date, time, reason,phone });
         await newAppointment.save();
         res.status(201).json({ message: 'Appointment booked successfully!' });
     } catch (error) {
