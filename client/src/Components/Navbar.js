@@ -8,19 +8,18 @@ export const Navbar = () => {
   const location = useLocation(); // Track the current route
 
   return (
-    <nav className="bg-green-100 p-4 shadow-lg w-full">
-    <ul className="flex justify-center space-x-8">
-      <li><a href="/" className="hover:text-green-600">Home</a></li>
-      <li><a href="/profile" className="hover:text-green-600">Profile</a></li>
-      <li><a href="/login" className="hover:text-green-600">Login</a></li>
-      <li><a href="/resource" className="hover:text-green-600">Resource</a></li>
-      <li><a href="/review" className="hover:text-green-600">Review</a></li>
-      <li><a href="/appointment" className="hover:text-green-600">Appointment</a></li>
-    </ul>
-  </nav>
-  
-
+    <nav className="bg-green-100 p-4 shadow-lg h-full w-64"> {/* Adjust width for vertical layout */}
+      <ul className="flex flex-col space-y-4"> {/* Use flex-col for vertical stacking */}
+        <li><a href="/" className="hover:text-green-600">Home</a></li>
+        <li><a href="/profile" className="hover:text-green-600">Profile</a></li>
+        <li><a href="/login" className="hover:text-green-600">Login</a></li>
+        <li><a href="/resource" className="hover:text-green-600">Resource</a></li>
+        <li><a href="/review" className="hover:text-green-600">Review</a></li>
+        <li><a href="/appointment" className="hover:text-green-600">Appointment</a></li>
+      </ul>
+    </nav>
   );
 };
+
 
 // export default Navbar;

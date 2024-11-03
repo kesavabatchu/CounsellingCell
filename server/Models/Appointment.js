@@ -1,9 +1,12 @@
+// models/Appointment.js
 const mongoose = require('mongoose');
 
 const appointmentSchema = new mongoose.Schema({
-  studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'Student' },  // Student reference
-  counselorId: { type: mongoose.Schema.Types.ObjectId, ref: 'Counselor' },  // Counselor reference
-  appointmentDate: Date,
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  date: { type: Date, required: true },
+  time: { type: String, required: true },
+  reason: { type: String, required: true },
 });
 
 module.exports = mongoose.model('Appointment', appointmentSchema);

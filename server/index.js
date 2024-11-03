@@ -5,10 +5,13 @@ const Student = require('./Models/Student');
 const Counselor = require('./Models/Counselor');
 const Appointment = require('./Models/Appointment');
 const User = require('./Models/users');
+const appointmentRoutes = require('./routes/appointments'); 
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+app.use('/api/appointments', appointmentRoutes);
 
 // DATABASE CONNECTION
 mongoose.connect(
