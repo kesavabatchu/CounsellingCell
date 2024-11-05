@@ -5,7 +5,7 @@ import LogoutButton from './Components/LogoutButton';
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/Home';
-import { Login } from './Pages/Login';
+import Login from './Pages/Login';
 import { Resource } from './Pages/Resource';
 import { Review } from './Pages/Review';
 import { Appointment } from './Pages/Appointment';
